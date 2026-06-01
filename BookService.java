@@ -7,12 +7,9 @@ import java.util.stream.Collectors;
 /**
  * BookService - 书籍服务类
  * 提供书籍的增删改查功能
-<<<<<<< HEAD
-=======
  * 
  * (仅测试git功能:123456789)
  * 
->>>>>>> dev
  */
 public class BookService {
     
