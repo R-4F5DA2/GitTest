@@ -7,46 +7,26 @@ import java.util.stream.Collectors;
 /**
  * BookService - 书籍服务类
  * 提供书籍的增删改查功能
- * 
- * (仅测试git功能:123456789)
- * 
  */
 public class BookService {
     
-    // 模拟数据库存储书籍
     private List<Book> bookList;
     
     public BookService() {
         bookList = new ArrayList<>();
-        // 初始化一些示例数据
         bookList.add(new Book(1, "Java编程思想", "Bruce Eckel", 99.0));
         bookList.add(new Book(2, "深入理解计算机系统", "Randal E. Bryant", 128.0));
         bookList.add(new Book(3, "设计模式：可复用面向对象软件的基础", "Erich Gamma", 68.0));
     }
     
-    /**
-     * 添加书籍
-     * @param book 要添加的书籍对象
-     */
     public void addBook(Book book) {
         bookList.add(book);
     }
     
-    /**
-     * 根据ID删除书籍
-     * @param id 书籍ID
-     * @return 是否删除成功
-     */
     public boolean deleteBook(int id) {
         return bookList.removeIf(book -> book.getId() == id);
     }
     
-    /**
-     * 根据ID更新书籍信息
-     * @param id 书籍ID
-     * @param updatedBook 更新后的书籍对象
-     * @return 是否更新成功
-     */
     public boolean updateBook(int id, Book updatedBook) {
         for (int i = 0; i < bookList.size(); i++) {
             Book book = bookList.get(i);
@@ -58,11 +38,6 @@ public class BookService {
         return false;
     }
     
-    /**
-     * 根据ID查询书籍
-     * @param id 书籍ID
-     * @return 书籍对象，如果不存在返回null
-     */
     public Book getBookById(int id) {
         return bookList.stream()
                 .filter(book -> book.getId() == id)
@@ -70,37 +45,85 @@ public class BookService {
                 .orElse(null);
     }
     
-    /**
-     * 查询所有书籍
-     * @return 书籍列表
-     */
     public List<Book> getAllBooks() {
         return new ArrayList<>(bookList);
     }
     
-    /**
-     * 根据书名模糊查询
-     * @param keyword 书名关键词
-     * @return 匹配的书籍列表
-     */
     public List<Book> searchBooksByTitle(String keyword) {
         return bookList.stream()
                 .filter(book -> book.getTitle().toLowerCase().contains(keyword.toLowerCase()))
                 .collect(Collectors.toList());
     }
     
-    /**
-     * 获取书籍数量
-     * @return 书籍总数
-     */
     public int getBookCount() {
         return bookList.size();
     }
     
-    /**
-     * 清空所有书籍
-     */
     public void clearAllBooks() {
         bookList.clear();
+    }
+    
+    /**
+     * Book - 书籍实体类（内部类）
+     * 表示一本书的基本信息
+     */
+    public static class Book {
+        
+        private int id;
+        private String title;
+        private String author;
+        private double price;
+        
+        public Book() {
+        }
+        
+        public Book(int id, String title, String author, double price) {
+            this.id = id;
+            this.title = title;
+            this.author = author;
+            this.price = price;
+        }
+        
+        public int getId() {
+            return id;
+        }
+        
+        public void setId(int id) {
+            this.id = id;
+        }
+        
+        public String getTitle() {
+            return title;
+        }
+        
+        public void setTitle(String title) {
+            this.title = title;
+        }
+        
+        public String getAuthor() {
+            return author;
+        }
+        
+        public void setAuthor(String author) {
+            this.author = author;
+        }
+        
+        public double getPrice() {
+            return price;
+        }
+        
+        public void setPrice(double price) {
+            this.price = price;
+        }
+        
+        @Override
+        public String toString() {
+            return "Book{" +
+                    "id=" + id +
+                    ", title='" + title + '\'' +
+                    ", author='" + author + '\'' +
+                    ", price=" + price +
+                    '}';
+        }
     }
 }
