@@ -3,12 +3,62 @@ package com.example.test;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-
+    public CategoryService() {
+        categoryList = new ArrayList<>();
+        categoryList.add(new Category(1, "编程语言", "Programming Languages"));
+        categoryList.add(new Category(2, "操作系统", "Operating Systems"));
+        categoryList.add(new Category(3, "数据结构", "Data Structures"));
+    }    public CategoryService() {
+        categoryList = new ArrayList<>();
+        categoryList.add(new Category(1, "编程语言", "Programming Languages"));
+        categoryList.add(new Category(2, "操作系统", "Operating Systems"));
+        categoryList.add(new Category(3, "数据结构", "Data Structures"));
+    }    public CategoryService() {
+        categoryList = new ArrayList<>();
+        categoryList.add(new Category(1, "编程语言", "Programming Languages"));
+        categoryList.add(new Category(2, "操作系统", "Operating Systems"));
+        categoryList.add(new Category(3, "数据结构", "Data Structures"));
+    }    public CategoryService() {
+        categoryList = new ArrayList<>();
+        categoryList.add(new Category(1, "编程语言", "Programming Languages"));
+        categoryList.add(new Category(2, "操作系统", "Operating Systems"));
+        categoryList.add(new Category(3, "数据结构", "Data Structures"));
+    }    public CategoryService() {
+        categoryList = new ArrayList<>();
+        categoryList.add(new Category(1, "编程语言", "Programming Languages"));
+        categoryList.add(new Category(2, "操作系统", "Operating Systems"));
+        categoryList.add(new Category(3, "数据结构", "Data Structures"));
+    }    public CategoryService() {
+        categoryList = new ArrayList<>();
+        categoryList.add(new Category(1, "编程语言", "Programming Languages"));
+        categoryList.add(new Category(2, "操作系统", "Operating Systems"));
+        categoryList.add(new Category(3, "数据结构", "Data Structures"));
+    }    public CategoryService() {
+        categoryList = new ArrayList<>();
+        categoryList.add(new Category(1, "编程语言", "Programming Languages"));
+        categoryList.add(new Category(2, "操作系统", "Operating Systems"));
+        categoryList.add(new Category(3, "数据结构", "Data Structures"));
+    }    public CategoryService() {
+        categoryList = new ArrayList<>();
+        categoryList.add(new Category(1, "编程语言", "Programming Languages"));
+        categoryList.add(new Category(2, "操作系统", "Operating Systems"));
+        categoryList.add(new Category(3, "数据结构", "Data Structures"));
+    }    public CategoryService() {
+        categoryList = new ArrayList<>();
+        categoryList.add(new Category(1, "编程语言", "Programming Languages"));
+        categoryList.add(new Category(2, "操作系统", "Operating Systems"));
+        categoryList.add(new Category(3, "数据结构", "Data Structures"));
+    }    public CategoryService() {
+        categoryList = new ArrayList<>();
+        categoryList.add(new Category(1, "编程语言", "Programming Languages"));
+        categoryList.add(new Category(2, "操作系统", "Operating Systems"));
+        categoryList.add(new Category(3, "数据结构", "Data Structures"));
+    }
 /**
  * CategoryService - 分类服务类
  * 提供分类的增删改查功能
  * 
- * 测试版本号：3333
+ * 测试版本号：2222
  * 
  */
 public class CategoryService {
